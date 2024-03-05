@@ -1,0 +1,102 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Event</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="acilirmenu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@1,100&family=Jost:wght@200&family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+	<style>
+	.anasayfa{
+	top:35%;
+	position:relative;
+	font-size:25px;
+	text-align:center;
+	}
+	h1{ color:#A73121}
+	.anasayfa2{
+	top:32%;
+	position:relative;
+	font-size:25px;
+	text-align:center;
+	}
+	a{
+	color:#EF8194;
+	}
+	a:hover{
+	color:#643731;
+	}
+	</style>
+</head>
+<body background="fotograf/arka.png">
+<header> 
+        <a href="index.php" class="logo"><img src="fotograf/logo.jpeg"> </a>
+
+        <ul class="navmenu">
+            <li><a href="index.php">ANA SAYFA</a></li>
+            <li><a href="galeri.php">GALERİ</a></li>
+            <li><a href="mekanlar.php">MEKANLAR</a></li>
+			<li><a href="iletisim.php">İLETİŞİM</a></li>
+        </ul>
+        
+        <div class="nav-icon">
+            <a href="profil.php"><i class='bx bx-user'></i></a>
+            <a href="favorilerim.php"><i class='bx bx-heart'></i></a>
+			<a href="mesajlarim.php"><i class='bx bx-message-rounded-dots'></i></a>
+
+            <!-- açılır menü butonu -->
+            <div class="menu-btn">
+                <i class="bx bx-menu"></i>
+              </div>
+            <!--  -->
+        </div>
+           
+           <!-- açılır menü kodları -->
+              <div class="side-bar">
+                <div class="close-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="menu">
+                  <div class="item"><a href="cikis.php"><i class="fas fa-desktop"></i>Çıkış</a></div>
+                  <div class="item"><a href="iletisim.php"><i class="fas fa-th"></i>İletişim</a></div>
+				  <div class="item"><a href="mesajlarim.php"><i class='fab fa-facebook-messenger'></i>Mesajlarım</a></div>
+                </div>
+              </div>
+            <!--  -->   
+        </div>
+    </header>
+	<div class="anasayfa">
+	<h1>Aradığın O Mekan<br></h1><br>	</div>
+	<div class="anasayfa2"><h2><a href="mekanlar.php">->BURADA<-</a><h2></div>
+
+    <!-- açılır menü js kodları -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+          $('.sub-btn').click(function(){
+            $(this).next('.sub-menu').slideToggle();
+            $(this).find('.dropdown').toggleClass('rotate');
+          });
+     
+          $('.menu-btn').click(function(){
+            $('.side-bar').addClass('active');
+            $('.menu-btn').css("visibility", "hidden");
+          });
+     
+          $('.close-btn').click(function(){
+            $('.side-bar').removeClass('active');
+            $('.menu-btn').css("visibility", "visible");
+          });
+        });
+        </script>
+     <!--  -->
+    <script src="script.js"></script>
+
+</body>
+</html>
